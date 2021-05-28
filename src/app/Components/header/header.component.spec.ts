@@ -22,4 +22,8 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('cpmponent title check', () => {
+    expect(component.title).toEqual("this is my test header");
+  });
 });
