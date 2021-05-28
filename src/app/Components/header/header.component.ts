@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title= "this is my test header";
+  textboxValue="";
   constructor() {
 
    }
@@ -18,6 +19,11 @@ export class HeaderComponent implements OnInit {
 
   getName(name: any){
     alert(name);
+  }
+  
+  trackEvents(myEvent: any){
+    console.log(myEvent)
+    this.textboxValue=myEvent
   }
 
 }
