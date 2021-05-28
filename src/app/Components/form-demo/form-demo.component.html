@@ -1,0 +1,9 @@
+<p>form-demo works!</p>
+<h1>import formsmodule in module.ts</h1>
+<form #myForm="ngForm" (ngSubmit)="getFormValues(myForm.value)">
+    <input type="=text" ngModel name="username" placeholder="enter username "><br>
+    <input type="=text" ngModel name="age" placeholder="enter age "><br>
+    <input type="=text" ngModel name="designation" placeholder="enter designation">
+    <button>Get form values</button>
+
+</form>
