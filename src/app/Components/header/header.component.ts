@@ -14,4 +14,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //function
+
+  getName(name: any){
+    alert(name);
+  }
+
 }
