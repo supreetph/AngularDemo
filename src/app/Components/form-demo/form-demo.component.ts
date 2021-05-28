@@ -1,4 +1,6 @@
+import { SharedService } from './../../shared.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-form-demo',
@@ -7,14 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormDemoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:SharedService) { }
+
+  ProductList:any=[];
 
   ngOnInit(): void {
+this.showProducts();
   }
 
   getFormValues(val: any){
     console.log(val);
 
+  }
+
+  showProducts(){
+    this.service.getProducts().subscribe(
+      a=>{
+        this.ProductList=a;
+      }
+    )
   }
 
 }
