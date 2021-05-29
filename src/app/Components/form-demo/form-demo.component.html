@@ -1,5 +1,6 @@
 <p>form-demo works!</p>
 <h1>import formsmodule in module.ts</h1>
+
 <form #myForm="ngForm" (ngSubmit)="getFormValues(myForm.value)">
   <input type="=text" ngModel name="username" placeholder="enter username "><br>
   <input type="=text" ngModel name="age" placeholder="enter age "><br>
@@ -11,9 +12,12 @@
 
 </form>
 <br>
-<table border="1">
-  <thead>
+<table border="1" class="styled-table">
+  <thead >
     <tr>
+      <th>
+        Id
+      </th>
       <th>
         item
       </th>
@@ -25,6 +29,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of ProductList">
+      <td>{{item.id}}</td>
       <td>{{item.item}}</td>
       <td>{{item.qty}}</td>
     </tr>
