@@ -1,7 +1,10 @@
 import { SharedService } from './../../shared.service';
 import { Component, OnInit } from '@angular/core';
 
-
+interface  Iproducts{
+  item:string
+  qty:string
+}
 
 @Component({
   selector: 'app-add-products',
@@ -18,11 +21,9 @@ export class AddProductsComponent implements OnInit {
 
   }
 
-  addProducts(payload:any){
+  addProducts(payload:Iproducts){
 
-    this.service.postProducts(payload).subscribe((res)=>{
-      console.log(res.toString());
-    });
+    this.service.postProducts(payload).subscribe(res=>console.log('suceess',res));
   }
 
 }
