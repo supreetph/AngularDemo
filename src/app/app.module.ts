@@ -8,12 +8,14 @@ import { FormDemoComponent } from './Components/form-demo/form-demo.component';
 import {FormsModule} from '@angular/forms'
 import { SharedService} from './shared.service';
 import {HttpClientModule} from '@angular/common/http';
+import { AddProductsComponent } from './Components/add-products/add-products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FormDemoComponent,
+    AddProductsComponent,
 
   ],
   imports: [

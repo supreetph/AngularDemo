@@ -1,0 +1,13 @@
+<p>add-products works!</p>
+<br>
+<form #productForm="ngForm" (ngSubmit)="addProducts(productForm.value)">
+
+Item:  <input type="=text" ngModel name="item" placeholder="enter item "><br>
+ Quantity: <input type="=text" ngModel name="qty" placeholder="enter quantity "><br>
+
+  <button type="submit">add product</button>
+  <br>
+
+
+
+</form>
