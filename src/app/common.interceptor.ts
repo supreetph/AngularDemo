@@ -28,7 +28,7 @@ export class CommonInterceptor implements HttpInterceptor {
     const header1=new HttpHeaders({'API_Key':'jahfjkha'});
     const head=new Headers();
     return next.handle(request.clone({headers:header1})).pipe(
-      catchError(this.handleError);
+      catchError(this.handleError)
     );
   }
 }
