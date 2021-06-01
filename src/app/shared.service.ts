@@ -13,7 +13,7 @@ export class SharedService {
  ApiUrl="https://localhost:44354/api";
   constructor( private http:HttpClient) { }
   getProducts():Observable<any[]>{
-    return this.http.get<any>(this.ApiUrl+'/productApi11');
+    return this.http.get<any>(this.ApiUrl+'/productApi');
   }
 
   postProducts(payload:any){
